@@ -1,0 +1,81 @@
+.homes {
+    grid-column: center-start / center-end;
+    margin: 13rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 6rem;
+}
+
+.home {
+    background-color: $color-grey-light-1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 4rem;
+
+    &__img {
+        width: 100%;
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        z-index: 1;
+    }
+
+    &__fav {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        fill: $color-primary;
+        width: 3rem;
+        height: 3rem;
+        margin: 1rem;
+        justify-self: end;
+        z-index: 2;
+    }
+
+    &__name {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        font-size: 2rem;
+        text-align: center;
+        padding: 1.5rem;
+        justify-self: center;
+        align-self: end;
+        transform: translateY(50%);
+        background-color: $color-primary-dark;
+        color: #fff;
+        width: 80%;
+        font-weight: 400;
+        z-index: 3;
+    }
+
+    &__location,
+    &__room, {
+        margin-top: 3rem;
+    }
+
+    &__room,
+    &__price {
+        transform: translateX(-2rem);
+    }
+
+    &__location,
+    &__room,
+    &__area,
+    &__price {
+
+        font-size: 1.8rem;
+        margin-left: 3rem;
+        display: flex;
+        align-items: center;
+
+        svg {
+            fill: $color-primary;
+            height: 3rem;
+            width: 3rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &__btn {
+        grid-column: 1 / -1;
+    }
+}

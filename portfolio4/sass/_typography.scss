@@ -1,0 +1,70 @@
+%head {
+    font-weight: 400;
+}
+
+.head-1 {
+    @extend %head;
+    font-size: 5rem;
+    color: $color-grey-light-1;
+    line-height: 1;
+}
+
+.head-2 {
+    @extend %head;
+    font-size: 4.5rem;
+    line-height: 1;
+
+    &__light {
+        color: $color-grey-light-1;
+    }
+    &__dark {
+        color: $color-grey-dark-1;
+    }
+}
+
+.head-3 {
+    @extend %head;
+    font-size: 1.8rem;
+    color: $color-primary;
+
+}
+
+.head-4 {
+    @extend %head;
+    font-size: 2rem;
+
+    &__light {
+        color: $color-grey-light-1;
+    }
+    &__dark {
+        color: $color-grey-dark-1;
+    }
+}
+
+.btn {
+    background-color: $color-primary;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-size: 2rem;
+    padding: 2rem 4rem;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        background-color: $color-primary-dark;
+    }
+}
+
+.mb-sm {
+    margin-bottom: 3rem;
+}
+.mb-md {
+    margin-bottom: 4rem;
+}
+.mb-lg {
+    margin-bottom: 5rem;
+}
+.mb-hg {
+    margin-bottom: 10rem;
+}

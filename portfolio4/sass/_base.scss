@@ -1,0 +1,53 @@
+// COLOR VARIABLES
+$color-primary: #bb9837;
+$color-primary-dark: #5f000d;
+
+$color-secondary: #3a2508;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+$bp-largest: 75em;
+$bp-large: 62.5em;
+$bp-medium: 50em;
+$bp-small: 37.5em;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    color: $color-grey-dark-2;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 90vh min-content 50vw repeat(3, min-content);
+    grid-template-columns: [sidebar-start] 10rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-largest) {
+        grid-template-rows: 10em 90vh min-content 50vw repeat(3, min-content);
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];    
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 10em calc(100vh - 10rem) min-content min-content min-content repeat(3, min-content);
+    }
+}
